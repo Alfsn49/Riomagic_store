@@ -5,7 +5,7 @@ const Orders = require('../models/orders.models');
 const OrdersDetails = require('../models/orders_details.models');
 const Products = require('../models/products.models');
 const Users = require('../models/users.models');
-
+const authenticateToken = require('../routes/authMiddleware');
 var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 

@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
 const { database } = require('../config/helpers');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const authRouter = require('./auth')
 /*Registro de usuarios*/
-router.use('/register', authRouter);
+router.use('/auth', authRouter);
+
 /* GET users listing. */
 router.get('/', async (req, res) => {
   try {
